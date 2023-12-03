@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SixDay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>this is scrollTrigger</h1>
+        <div class="card">card number 1</div>
+        <div class="card">card number 2</div>
+        <div class="card">card number 3</div>
+        <div class="card">card number 4</div>
+        <div class="card">card number 5</div>
+        <div class="card">card number 6</div>
+        <div class="card">card number 7</div>
+        <div class="card">card number 8</div>
+        <div class="card">card number 9</div>
+        <div class="card">card number 10</div>
+    </div>
+    <script>
+        const boxes = document.querySelectorAll('.card')
+
+window.addEventListener('scroll', checkBoxes)
+
+checkBoxes()
+
+function checkBoxes() {
+    const triggerBottom = window.innerHeight / 5 * 4
+
+    boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top
+
+        if(boxTop < triggerBottom) {
+            box.classList.add('show')
+        } else {
+            box.classList.remove('show')
+        }
+    })
+}
+    </script>
+</body>
+</html>

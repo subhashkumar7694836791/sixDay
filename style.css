@@ -1,0 +1,44 @@
+*
+{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+html,body
+{
+height:100%;
+width:100%;
+}
+.main{
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgb(249, 247, 247);
+}
+.main .card{
+    height: 250px;
+    width: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 29px;
+    font-family: sans-serif;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: violet;
+}
+.card:nth-of-type(even) {
+    transform: translateX(-400%);
+    color: rgb(0, 51, 255);
+  }
+  
+  .card.show {
+    transform: translateX(0);
+  }
+  
+ 
